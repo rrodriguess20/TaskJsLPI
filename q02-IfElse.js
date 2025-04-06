@@ -1,5 +1,16 @@
-let valor = 8;
+const readline = require('readline').createInterface({
 
-const intervalo = valor >=7 && valor<= 10 ? "Esta no intervalo" : "Nao esta no intervalo";
+	input: process.stdin,
+	output: process.stdout
+});
 
-console.log(intervalo);
+	readline.question("Insira um valor inteiro para x: ", (xStr)=>{
+
+		const x = parseInt(xStr);
+
+		const intervalo = x >=7 && x<= 10 ? "Esta no intervalo" : "Nao esta no intervalo";
+
+		console.log(intervalo);
+
+		readline.close();
+	});

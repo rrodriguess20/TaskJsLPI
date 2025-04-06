@@ -1,6 +1,19 @@
-let x = 1.5;
-let y = 2.5;
+const readline = require('readline').createInterface({
 
-let result = (((x**y)+3*x+1))/((x+1)**y);
+	input: process.stdin,
+	output: process.stdout
+});
 
-console.log(`Resultado: ${result}`);
+	readline.question("Insira um valor real para x: ", (xStr)=>{
+		readline.question("Insira um valor real para y: ", (yStr)=>{
+
+			const x = parseFloat(xStr);
+			const y = parseFloat(yStr);
+
+			const result = (((x**y)+3*x+1))/((x+1)**y);
+
+			console.log(`Resultado: ${result.toFixed(5)}`);
+
+			readline.close();
+		})
+	});

@@ -12,7 +12,7 @@ const readline = require('readline').createInterface({
 
 			const result = (((x**y)+3*x+1))/((x+1)**y);
 
-			console.log(`Resultado: ${result.toFixed(5)}`);
+			console.log(`Resultado: ${result}`);
 
 			readline.close();
 		})

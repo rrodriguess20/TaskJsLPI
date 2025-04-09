@@ -39,7 +39,7 @@ const readline = require('readline').createInterface({
 						console.log("Operacao invalida!");
 
 				}
-
+				
 				readline.close();
 			})
 		})

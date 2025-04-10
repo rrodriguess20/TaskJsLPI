@@ -1,4 +1,3 @@
-//NECESSÁRIO CORREÇÕES!!!!!!!!!!!
 function informacoes(pessoas){
 
 	let maiorAltura = 0;
@@ -12,8 +11,9 @@ function informacoes(pessoas){
 
 		const {altura, sexo} = pessoas[i];
 
-		if(pessoas[i]===0)
+		if(i===0)
 			maiorAltura = menorAltura = altura;
+		
 		
 		else{
 
@@ -24,8 +24,30 @@ function informacoes(pessoas){
 				menorAltura = altura;
 		}
 		
+
+		if(sexo==='M'||sexo==='m'){
+			nHomens++;
+			somaAlturaH += altura;
+		}
+
+		if(sexo==='F'||sexo==='f'){
+			nMulheres++;
+			somaAlturaM += altura;
+		}
+		
 		
 	}
+
+	let mediaAlturaH = somaAlturaH/nHomens;
+	let mediaAlturaM = somaAlturaM/nMulheres;
+
+	console.log(`Informações:`);
+	console.log(`Maior altura: ${maiorAltura}`);
+	console.log(`Menor altura: ${menorAltura}`);
+	console.log(`Nº de homens: ${nHomens}`);
+	console.log(`Nº de mulheres: ${nMulheres}`);
+	console.log(`Média das alturas - Homens: ${mediaAlturaH.toFixed(2)}`);
+	console.log(`Média das alturas - Mulheres: ${mediaAlturaM.toFixed(2)}`);
 }
 
 const pessoas = [

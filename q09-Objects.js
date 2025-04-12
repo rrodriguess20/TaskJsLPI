@@ -51,3 +51,20 @@ var consulta = {
 	clinica: clinica,
 	paciente: paciente
 }
+
+function exibeConsulta(consulta){
+
+	console.log(`\n--- Detalhes da Consulta ---`);
+	console.log(`Paciente: ${consulta.paciente.nome}`);
+	console.log(`Telefone: ${consulta.paciente.telefone}`);
+	console.log(`Médico: ${consulta.medico.nome}`);
+	console.log(`Especialização: ${consulta.medico.especializacao.nome}`);
+	console.log(`Descrição: ${consulta.medico.especializacao.descricao}`);
+	console.log(`Data: ${consulta.data}`);
+	console.log(`Horário: ${consulta.horario}`);
+	console.log(`Clínica: ${consulta.clinica.nome}`);
+	console.log(`Endereço: ${consulta.clinica.endereco.nome}`);
+	console.log(`CEP: ${consulta.clinica.endereco.cep}`);
+}
+
+exibeConsulta(consulta);
